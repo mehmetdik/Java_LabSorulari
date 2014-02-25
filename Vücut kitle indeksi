@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+
+public class Vucutkitleindeksi {
+
+	
+	public static void main(String[] args) {
+		float kilo,boy,indeks,sec;
+		System.out.print("1-Erkek\n2-Kadin");
+		Scanner scan=new Scanner(System.in);
+		sec=scan.nextInt();
+		if (sec==1)
+		{
+			System.out.print("Kilo(kg)=");
+			Scanner ilk=new Scanner(System.in);
+			kilo=ilk.nextFloat();
+			
+			System.out.print("\nBoy(m)=");
+			Scanner iki=new Scanner(System.in);
+			boy=iki.nextFloat();
+			
+			indeks=(float)kilo/(boy*boy);
+			System.out.print(indeks);
+			if (indeks<20.7) {
+			System.out.print("\nZayifsiniz.Sağlık riski yok.");
+			}
+			else if (20.7<indeks && indeks<26.4)
+			{
+				System.out.println("Normalsiniz Risk yok.");
+			}
+			else if (26.5<indeks && indeks<31.1)
+			{
+				System.out.println("Şimanlık	sınırında");	
+			}
+			else if (indeks>31.2)
+			{
+				System.out.println("Obez");	
+			}
+		}
+		
+		else if (sec==2)
+		{
+			System.out.print("Kilo(kg)=");
+			Scanner ilk=new Scanner(System.in);
+			kilo=ilk.nextFloat();
+			
+			System.out.print("\nBoy(m)=");
+			Scanner iki=new Scanner(System.in);
+			boy=iki.nextFloat();
+			
+			indeks=(float)kilo/(boy*boy);
+			System.out.print(indeks);
+			if (indeks<19.1) {
+			System.out.print("\nZayifsiniz.Sağlık riski yok.");
+			}
+			else if (19.1<indeks && indeks<25.8)
+			{
+				System.out.println("Normalsiniz Risk yok.");
+			}
+			else if (25.9<indeks && indeks<32.2)
+			{
+				System.out.println("Şimanlık	sınırında");	
+			}
+			else if (indeks>32.3)
+			{
+				System.out.println("Obez");	
+			}
+		}
+		else 
+		{
+			System.out.print("Yanlis secim");
+		}
+		
+
+	}
+
+}
