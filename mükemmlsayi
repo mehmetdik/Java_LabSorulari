@@ -1,0 +1,29 @@
+
+public class mükemmelsayi {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int toplam=0,i,j;
+        for(i=1; i<1000; i++)
+        {
+                toplam=0;
+                for(j=1; j<i; j++)
+                {
+                        if(i%j==0) 
+
+                        {
+                                toplam=toplam + j;
+                        }
+                }
+                if(toplam==i)
+                {
+                        System.out.println("\n"+toplam);
+                }
+	}
+
+	}
+}
