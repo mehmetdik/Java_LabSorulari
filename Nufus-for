@@ -1,0 +1,21 @@
+
+public class Nüfüsfor {
+
+	
+	public static void main(String[] args) {
+		int Anuf=10000000,Bnuf=40000000,yil=0;
+		for (;;) 
+		{
+			Anuf=Anuf+(Anuf/4);
+			Bnuf=Bnuf+(Bnuf*12)/100;
+			yil++;
+			if (Anuf>Bnuf)
+			{
+				break;
+			}
+		}
+		System.out.println(yil+" yıl sonra A ülkesinin nüfüsu B ülkesinin nüfüsunu geçer.");
+
+	}
+
+}
