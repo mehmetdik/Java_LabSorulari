@@ -1,0 +1,52 @@
+
+public class ikizasalsayilar {
+
+	
+	public static void main(String[] args) {
+		 int i,j,say,b,say2;
+
+
+	        for(i=99; i>1; i--)
+	        {
+	                say=0;
+	                for(j=i-1; 1<j; j--)
+	                {   
+	                        if(i%j==0)
+	                        {
+	                                say=1;   
+
+	                        }
+
+
+	                }
+	                if(say==0)
+	                {
+	                        
+	                        b=i-2;
+	                        say2=0;
+	                        for(j=b-1; 1<j; j--)
+	                        {   
+	                                if(b%j==0)
+	                                {
+	                                        say2=1;   
+
+	                                }
+	                                
+
+	                        }
+	                        if(say2==0)
+	                        {
+	                                
+	                                System.out.println("ikiz en buyuk sayilar =" +i+ " ve " +b);
+	                                break;
+
+
+	                        }
+
+
+	                }
+	        }
+
+	}
+
+}
