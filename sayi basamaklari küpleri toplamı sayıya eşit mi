@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+
+public class kupleritoplamıkendisineesitmi {
+
+	
+	public static void main(String[] args) {
+		try {
+			
+		
+		int sayi,binlik,yüzlük,onluk,birlik,ara,ara2,toplam;
+		
+		System.out.print("Sayi=");
+		Scanner scan=new Scanner(System.in);
+		sayi=scan.nextInt();
+		if(999<sayi &&sayi<10000)
+		{	
+		binlik=sayi/1000;
+		ara=sayi%1000;
+		yüzlük=ara/100;
+		ara2=ara%100;
+		onluk=ara2/10;
+		birlik=ara2%10;
+		toplam=(binlik*binlik*binlik)+(yüzlük*yüzlük*yüzlük)+(onluk*onluk*onluk)+(birlik*birlik*birlik);
+		if (sayi==toplam) 
+		{
+			System.out.print("\nGirdiğiniz sayi basamaklarinin küpleri toplamına eşit.");
+		}
+		else {
+			System.out.print("Girdiğiniz sayi basamaklarinin küpleri toplamına eşit değil.");
+		}
+		}
+		else {
+			System.out.println("4 basamaklı bir sayi giriniz.");
+		}
+		} catch (Exception e) {
+			System.out.println(" bir sayi giriniz.");// TODO: handle exception
+		}
+		
+	}
+
+}
