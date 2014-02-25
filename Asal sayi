@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+
+public class Asalsayi {
+
+	
+	public static void main(String[] args) 
+	{
+		int sayi,sonuc = 0;
+		int x=0;
+		System.out.println("Sayi=");
+		Scanner scan=new Scanner(System.in);
+		sayi=scan.nextInt();
+		if (sayi==2) 
+		{
+			System.out.println("1 tane asal sayi");
+		}
+		else{
+		for (int i = 2; i < sayi; i++) 
+		{int rs=0;
+			for (int j = 2; j < i; j++) 
+			{
+				if (i%j==0)
+				{
+					rs++;
+				}
+			}
+			if(rs==0)
+			{ 
+				x++;
+				System.out.println(i+"-");
+			}
+			
+		}
+		System.out.println(x+"Tane sayi asal");
+		}
+	}
+
+}
