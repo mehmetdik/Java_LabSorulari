@@ -1,0 +1,32 @@
+
+public class dortislem {
+
+
+int a,b;
+int sonuc;
+float sonuc1;
+
+public int toplam(int x,int y)
+{
+	sonuc=x+y;
+	
+	return sonuc;
+}
+public int fark(int x,int y)
+{
+	sonuc=x-y;
+	
+	return sonuc;
+}
+public int carpma(int x,int y)
+{
+	sonuc=x*y;
+	return sonuc;
+}
+public int bolme(int x,int y)
+{
+	sonuc1=(float)x/y;
+	return sonuc;
+}
+	
+}
