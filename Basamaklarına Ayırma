@@ -6,28 +6,36 @@ public class BasamakAyırma {
 	
 	public static void main(String[] args) 
 	{
-	int sayi,binlik,yüzlük,onluk,birlik,ara,ara2;
+		try {
+		int sayi,binlik,yüzlük,onluk,birlik,ara,ara2;
 	System.out.print("Cozumlenecek sayiyi giriniz:");
 	Scanner scan=new Scanner(System.in);
 	sayi=scan.nextInt();
-	if(sayi>999 && sayi<10000)
-	{	
-	binlik=sayi/1000;
-	ara=sayi%1000;
-	yüzlük=ara/100;
-	ara2=ara%100;
-	onluk=ara2/10;
-	birlik=ara2%10;
+ 
+	 if(sayi>999 && sayi<10000  )
+		{	
+		binlik=sayi/1000;
+		ara=sayi%1000;
+		yüzlük=ara/100;
+		ara2=ara%100;
+		onluk=ara2/10;
+		birlik=ara2%10;
+		
+		System.out.println("Girilen sayi="+sayi);
+		System.out.print(binlik+"tane binlik sayi\n");
+		System.out.print(yüzlük+"tane yüzlük sayi\n");
+		System.out.print(onluk+"tane onluk sayi\n");
+		System.out.print(birlik+"tane birlik sayi vardır");
+		}
+		else {
+			System.out.print("4 haneli bir sayi giriniz.");
+		}
 	
-	System.out.println("Girilen sayi="+sayi);
-	System.out.print(binlik+"tane binlik sayi\n");
-	System.out.print(yüzlük+"tane yüzlük sayi\n");
-	System.out.print(onluk+"tane onluk sayi\n");
-	System.out.print(birlik+"tane birlik sayi vardır");
-	}
-	else {
-		System.out.print("4 haneli bir sayi giriniz.");
-	}
+} 
+ catch (Exception e) {
+	System.out.printf("Sayi Giriniz.");
+}
+	
 	}
 
 }
