@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class swap {
+
+	
+	public static void main(String[] args) {
+		try {
+			
+		
+		int x,y,z=0;
+		System.out.println("1.Sayiyi Giriniz:");
+		Scanner scan=new Scanner(System.in);
+		x=scan.nextInt();
+		System.out.println("2.Sayiyi Giriniz:");
+		Scanner scan2=new Scanner(System.in);
+		y=scan2.nextInt();
+		System.out.println("x="+x);
+		System.out.println("y="+y);
+		
+		z=x;
+		x=y;
+		y=z;
+		System.out.println("x="+x);
+		System.out.println("y="+y);
+		
+		} catch (Exception e) {
+			System.out.println("Sayi giriniz.");
+		}
+	}
+
+}
