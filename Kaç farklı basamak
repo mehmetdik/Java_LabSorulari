@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+
+public class Kacfarklisayi {
+
+	public static void main(String[] args) 
+	{
+		try {
+		int sayi,binlik,yüzlük,onluk,birlik,yard,yard1,sayac=1;
+		Scanner scan=new Scanner(System.in);
+		System.out.print("4 basamaklı bir sayı giriniz:");
+		sayi=scan.nextInt();
+		
+			
+		
+		if (999<sayi && sayi<10000) 
+		{
+			binlik=sayi/1000;
+			yard=sayi%1000;
+			yüzlük=yard/100;
+			yard1=yard%100;
+			onluk=yard1/10;
+			birlik=yard1%10;
+			if (binlik!=yüzlük && binlik!=onluk && binlik!=birlik )
+			{
+				sayac++;
+			}
+						 
+			 if (yüzlük!=onluk && yüzlük!=birlik) 
+			{
+				sayac++;
+			}
+			 
+			 if (onluk!=birlik) 
+			{
+				sayac++;
+			}
+			System.out.println(sayac+" Farklı rakam");
+			
+		}
+		else 
+		{
+			System.out.println("4 basamaklı bir sayi giriniz");
+			
+		}
+		} 
+		catch (Exception e)
+		{
+			System.out.println("Hata");
+			System.exit(-1);
+		}
+
+	}
+
+}
