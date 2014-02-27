@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+
+public class sınıf {
+
+	
+		
+	
+	public static void main(String[] args) {
+		int sayi=0,sayi1=0,toplam,fark,carpma;
+		float bolme;
+		String sec="";
+		
+		Scanner scan=new Scanner(System.in);
+		Scanner scan1=new Scanner(System.in);
+		System.out.println("1.sayi:");
+		try {
+			sayi=scan.nextInt();
+		} catch (Exception e) {
+			System.out.println("Sayi Giriniz");
+			System.exit(-1);
+		}
+		
+		System.out.println("2.sayi:");
+		try {
+			sayi1=scan.nextInt();
+		}
+		catch(ArithmeticException e)
+		{
+			
+		}
+		catch (Exception e) {
+			System.out.println("Sayi Giriniz");
+			System.exit(-1);
+		}
+		
+		
+		System.out.println("islem sec=");
+		try {
+			sec=scan1.nextLine();
+		} catch (Exception e)
+		{
+			System.out.println("Sayi Giriniz");
+			System.exit(-1);
+		}
+		
+		
+		if (sec.equalsIgnoreCase("+"))
+		{
+			toplam=sayi+sayi1;
+			System.out.print("Toplam="+toplam);
+		}
+		else if (sec.equalsIgnoreCase("-"))
+		{
+			if (sayi>sayi1) 
+			{
+				fark=sayi-sayi1;
+				System.out.print("Fark="+fark);
+			}
+			else 
+			{
+				fark=sayi1-sayi;
+				System.out.print("Fark="+fark);
+			}
+			
+		}
+		else if (sec.equalsIgnoreCase("*"))
+		{
+			carpma=sayi*sayi1;
+			System.out.print("carpim="+carpma);
+		}
+		else if (sec.equalsIgnoreCase("/"))
+		{
+			if (sayi==0) 
+			{
+				System.out.println("Sıfır Girilmez");
+				
+			}
+			else if (sayi1==0)
+			{
+				System.out.println("Sıfır Girilmez");
+			}
+			else{
+			bolme=(float)sayi/sayi1;
+			System.out.print("bolme="+bolme);
+			}
+		}
+
+	}
+
+
+
+}
