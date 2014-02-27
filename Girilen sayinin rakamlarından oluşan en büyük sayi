@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+
+public class ücbasamklisayidanolusanenbüyüksayi {
+
+	
+	public static void main(String[] args) 
+	{
+		try {
+			
+		
+		int sayi,yüzlük,onluk,birlik,yard=0,max=0,min=0,ort=0;
+		Scanner scan=new Scanner(System.in);
+		System.out.print("3 basamaklı bir sayi giriniz:");
+		sayi=scan.nextInt();
+		if (sayi>99 && sayi<1000)
+		{
+			yüzlük=sayi/100;
+			yard=sayi%100;
+			onluk=yard/10;
+			birlik=yard%10;
+			if (yüzlük>onluk && yüzlük>birlik)
+			{
+				max=yüzlük;
+				if (onluk>birlik) 
+				{
+					ort=onluk;
+					min=birlik;
+				}
+				else 
+				{
+					ort=birlik;
+					min=onluk;
+				}
+			}
+			
+			else if (onluk>birlik && onluk>yüzlük)
+			{
+				max=onluk;
+				if (yüzlük>birlik) 
+				{
+					ort=yüzlük;
+					min=birlik;
+				}
+				else 
+				{
+					ort=birlik;
+					min=yüzlük;
+				}
+				
+			}
+			else if (birlik>yüzlük && birlik>onluk) 
+			{
+				max=birlik;
+				if (onluk>yüzlük) 
+				{
+					ort=onluk;
+					min=yüzlük;
+				}
+				else 
+				{
+					ort=yüzlük;
+					min=onluk;
+				}
+			}
+			
+			System.out.println("En büyük sayi="+max+ort+min);
+			
+			
+		}
+		else 
+		{
+			System.out.println("Hata");
+			System.exit(-1);
+		}
+		
+		} catch (Exception e)
+		{
+			System.out.println("Hata");
+			System.exit(-1);
+		}
+		
+	}
+
+}
